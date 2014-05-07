@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout android:id="@+id/search_title"
+    	 style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/ic_title_home"
+            android:onClick="onHomeClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+
+	<LinearLayout style="@style/TitleBar">
+	    <AutoCompleteTextView
+			android:id="@+id/edtSearch"
+			android:layout_gravity="center"
+			android:layout_marginTop="2dp"
+			android:layout_marginLeft="2dp"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:lines="1" 
+			android:layout_weight="1" />
+	    
+	    <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_search"
+            android:onClick="onSearchClick" />
+	</LinearLayout>
+	<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:textColor="@color/title_text"
+			android:text="@string/filter" />
+	<LinearLayout style="@style/TitleBar">
+	    <AutoCompleteTextView
+			android:id="@+id/edtAdd"
+			android:layout_gravity="center"
+			android:layout_marginTop="2dp"
+			android:layout_marginLeft="2dp"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:lines="1" 
+			android:layout_weight="1" />
+	    <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_add"
+            android:src="@drawable/ic_menu_add"
+            android:onClick="onAddClick" />
+	</LinearLayout>
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginRight="-2dp" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

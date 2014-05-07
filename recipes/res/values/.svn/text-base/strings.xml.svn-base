@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Пан Галушка</string>
+    <string name="serverUrl">SERVER_URL</string>
+
+    <string name="description_logo">Пан Галушка</string>
+    <string name="description_home">Главная</string>
+    <string name="description_search">Поиск</string>
+    <string name="description_mic">Поиск</string>
+    <string name="description_refresh">Обновить</string>
+    <string name="description_delete">Удалить</string>
+    <string name="description_comments">Комментарии</string>
+    <string name="description_share">Поделиться</string>
+    <string name="description_star">Отметить</string>
+	<string name="description_done">Готово</string>
+	<string name="description_back">Назад</string>
+	<string name="description_send_comm">Новый комментарий</string>
+	<string name="description_add">Добавить</string>
+	<string name="description_font">Шрифт</string>
+	
+	<string name="voice_description">назовите ингредиент</string>
+	<string name="voice_result">выберите ингредиент</string>
+    <string name="voice_inet_required">Нет подключения к сети</string>
+	
+	<string name="title_basket">Корзина</string>
+    <string name="title_dish">Блюда</string>
+    <string name="title_starred">Избранное</string>
+    <string name="title_kitchen">Кухня</string>
+    <string name="title_units">Таблица мер и весов</string>
+    <string name="title_e">Таблица пищевых добавок</string>
+    <string name="title_reference">Справочник</string>
+    <string name="title_profile">Профиль</string>
+    
+    <string name="title_comments">Комментарии</string>
+    <string name="title_share">Поделиться</string>
+
+    <string name="title_search">Поиск</string>
+    <string name="title_search_query">Поиск \'<xliff:g id="query">%1$s</xliff:g>\'</string>
+    <string name="title_mic">Поиск</string>
+    
+    <string name="btn_basket">Корзина</string>
+    <string name="btn_dish">Блюда</string>
+    <string name="btn_starred">Избранное</string>
+    <string name="btn_kitchen">Кухня</string>
+
+    <string name="empty_recipe">поиск рецептов...</string>
+    <string name="empty_recipe_detail">поиск рецепта...</string>
+    <string name="empty_kitchen">поиск рецептов...</string>
+    <string name="empty_search">Результаты поиска</string>
+    <string name="empty_comments">загрузка комментариев...</string>
+	<string name="search_not_found">Совпадений не обнаружено. \n Попробуйте изменить параметры поиска.</string>
+	<string name="starred_not_found">Здесь появится список рецептов, которые вы отметите звездочкой.</string>
+	<string name="filter">Ингредиенты:</string>
+	
+
+    <string name="recipe_make">Инструкции</string>
+    <string name="recipe_products">Состав</string>
+    <string name="add_to_basket">Добавить в корзину...</string>
+    <string name="basket_done">Ингредиенты добавлены</string>
+    <string name="delete_confirm">Очистить список</string>
+    <string name="empty_basket">Корзина еще пуста. \n Здесь появится список продуктов, необходимый для приготовления выбранного блюда.</string>
+    
+    <string name="cook_time">время - %s мин.</string>
+    <string name="portions">порций - %s</string>
+    <string name="calories">калорий ~ </string>
+    
+    <string name="search_recipes">Рецепты</string>
+    <string name="starred_recipes">Рецепты</string>
+    
+    <string name="search_label">Пан Галушка</string>
+    <string name="search_hint">поиск рецептов</string>
+	
+	<string name="basket_share">Нужно купить:</string>
+
+    <string name="share_template">Я готовлю \'<xliff:g id="title">%1$s</xliff:g>\'. Пан Галушка</string>
+    
+    <string name="recipe_of_the_day_title">Рецепт дня</string>
+
+	<string name="ru">Русский</string>
+	<string name="ua">Украинский</string>
+	<string name="exit">Выход</string>
+	
+	<string name="update">Обновление</string>
+	<string name="status_insert_dish">моем посуду...</string>
+	<string name="status_insert_kitchen">прибираем на кухне...</string>
+	<string name="status_insert_product">готовим рабочее место...</string>
+	<string name="status_insert_item">открываем холодильник...</string>
+	<string name="status_insert_recipe_product">достаем ингредиенты...</string>
+	<string name="status_insert_recipe">достаем ингредиенты...</string>
+	<string name="status_insert_units">открываем рецепты...</string>
+	<string name="status_insert_e">моем руки...</string>
+	<string name="status_insert_reference">моем руки...</string>
+	
+	<string name="unit_products">продукты /\nграммы</string>
+	<string name="unit_glass1">стак. (250)</string>
+	<string name="unit_glass2">стак. (200)</string>
+	<string name="unit_stl">ст.л.</string>
+	<string name="unit_chl">ч.л.</string>
+	<string name="unit_sht">1 шт</string>
+	
+	<string name="unit_veg">Овощи, грибы и травы</string>
+	<string name="unit_fru">Фрукты и ягоды</string>
+	<string name="unit_nut">Орехи и сухофрукты</string>
+	<string name="unit_mil">Молоко и молочные продукты</string>
+	<string name="unit_fat">Жиры и масла, яйца</string>
+	<string name="unit_bob">Мука, крупы и бобовые</string>
+	<string name="unit_dri">Напитки</string>
+	<string name="unit_swe">Сладости</string>
+	<string name="unit_oth">Разное</string>
+	
+	<string name="e_c1">E100-E199 (Красители)</string>
+	<string name="e_c2">E200-E299 (Консерванты)</string>
+	<string name="e_c3">E300-E399 (Антиоксиданты)</string>
+	<string name="e_c4">E400-E599 (Стабилизаторы, эмульгаторы)</string>
+	<string name="e_c5">E600-E699 (Усилители вкуса и аромата)</string>
+	<string name="e_c6">E900-E999 (Антифламинги и другие вещества)</string>
+	
+	<string name="e_f1">Запрещенный</string>
+	<string name="e_f2">Опасный</string>
+	<string name="e_f3">Подозрительный</string>
+	<string name="e_f4">Запрещен в ряде стран</string>
+	
+	<string name="remove_ads">Отписаться от рекламы</string>
+	<string name="select_account">Выберите Google аккаунт</string>
+	
+	<string name="welcome">Welcome to the Sample store!</string>
+	<string name="billing_not_supported_title">Can\'t make purchases</string>
+	<string name="billing_not_supported_message">The Market billing
+		service is not available at this time. You can continue to use this app but
+		you
+		won\'t be able to make purchases.
+	</string>
+	<string name="cannot_connect_title">Can\'t connect to Market</string>
+	<string name="cannot_connect_message">This app cannot connect to Market.
+		Your version of Market may be out of date.
+		You can continue to use this app but you
+		won\'t be able to make purchases.
+	</string>
+	<string name="restoring_transactions">Restoring transactions</string>
+	<string name="learn_more">Learn more</string>
+	<string
+		name="help_url"
+		formatted="false">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%
+	</string>
+	<string name="buy">Buy</string>
+	<string name="select_item">Select an item</string>
+	<string name="edit_payload">Edit Payload</string>
+	<string name="edit_payload_title">Edit the developer payload associated with this
+		purchase</string>
+	<string name="edit_payload_accept">Set</string>
+	<string name="edit_payload_clear">No Payload</string>
+	<string name="items_for_sale">Items for sale</string>
+	<string name="items_you_own">Items you own</string>
+	<string name="recent_transactions">Recent activity</string>
+
+	<string name="two_handed_sword">Two-handed sword</string>
+	<string name="potions">Potions</string>
+
+	<!-- The following are reserved skus defined by Market for testing. -->
+	<string name="android_test_canceled">android.test.canceled</string>
+	<string name="android_test_purchased">android.test.purchased</string>
+	<string name="android_test_item_unavailable">android.test.item unavailable</string>
+	<string name="android_test_refunded">android.test.refunded</string>
+	    
+	<string name="result_ok">Премиум аккаунт активирован. Спасибо.</string>
+	<string name="purchased">Премиум аккаунт активирован. Спасибо.</string>
+	<string name="cancelled">Активация Премиум аккаунта отменена.</string>
+	
+	<string name="profile_empty">Нажмите здесь, чтобы связать ваш профиль с аккаунтом в Google+.</string>
+    <string name="premium_empty">Нажмите здесь, чтобы активировать премиум аккаунт.</string>
+    <string name="premium_completed">Ваш премиум аккаунт активирован.</string>
+        
+	<string name="add_comment">Добавить комментарий</string>
+	<string name="premium_account">VIP</string>
+	<string name="delete_comment">Удалить комментарий?</string>
+    <string name="set_nickname">Ваш псевдоним</string>
+    <string name="save">Сохранить</string>
+    
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_background">#F4CB28</color>
+    <color name="title_text">#181818</color>
+    <color name="title_text_alt">#ff000000</color>
+    <color name="foreground1">#181818</color>
+    <color name="foreground2">#181818</color>
+    <color name="background1">#ffffffff</color>
+    <color name="background2">#F4CB28</color>
+    <color name="background3">#F4CB28</color>
+    <color name="background4">#00981B</color>
+    <color name="title_separator">#40ffffff</color>
+	<color name="units_separator">#80F4CB28</color>
+	<color name="units_header">#536926</color>
+	<color name="white">#ffffffff</color>
+	<color name="red">#ed6384</color>
+	<color name="orange">#f68a0b</color>
+	<color name="yellow">#e5e346</color>
+	<color name="blue">#107fe7</color>
+</resources>

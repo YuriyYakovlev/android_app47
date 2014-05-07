@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout android:id="@+id/basket_title"
+     	style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/ic_title_home"
+            android:onClick="onHomeClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_delete"
+            android:src="@drawable/ic_title_delete"
+            android:onClick="onDeleteClick" />
+        
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_share"
+            android:src="@drawable/ic_title_share"
+            android:onClick="onShareClick" />
+    </LinearLayout>
+
+	<include layout="@layout/activity_basket_content" />
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:id="@+id/addProductForm"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    <AutoCompleteTextView
+			android:id="@+id/edtAdd"
+			android:layout_gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:lines="1" 
+			android:layout_weight="1" />
+		<ImageView
+			android:id="@+id/btnAdd"
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+			android:contentDescription="@string/description_add"
+			android:src="@drawable/ic_menu_add"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:layout_gravity="center"
+			android:onClick="onAddClick"
+			/>
+	 </LinearLayout>
+
+</LinearLayout>

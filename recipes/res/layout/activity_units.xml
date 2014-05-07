@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout  android:id="@+id/dish_title"
+        style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/ic_title_home"
+            android:onClick="onHomeClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+
+	
+	<Spinner 
+        android:id="@+id/spCategories"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal" 
+        android:drawSelectorOnTop="true" />
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="0dip"
+	    android:paddingBottom="0dip"
+	    android:paddingRight="2dip"
+	    style="@style/ListItem">
+	
+		<TextView
+	        android:layout_weight="1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:gravity="center_vertical"
+	        android:text="@string/unit_products"
+	        android:textColor="@color/units_header"
+	        android:minHeight="?android:attr/listPreferredItemHeight" />
+	
+		<ImageView style="@style/UnitsSeparator" />	
+	    
+	    <TextView
+	        android:layout_width="40dp"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/unit_glass1"
+	        android:textColor="@color/units_header"
+	        android:layout_gravity="center_vertical" />
+	    
+		<ImageView style="@style/UnitsSeparator" />	
+	    
+	    <TextView
+	        android:layout_width="40dp"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/unit_glass2"
+	        android:textColor="@color/units_header"
+	        android:layout_gravity="center_vertical" />    
+	
+		<ImageView style="@style/UnitsSeparator" />	
+	    
+	    <TextView
+	        android:layout_width="40dp"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/unit_stl"
+	        android:textColor="@color/units_header"
+	        android:layout_gravity="center_vertical" />
+	        
+		<ImageView style="@style/UnitsSeparator" />	
+	    
+	    <TextView
+	        android:layout_width="40dp"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/unit_chl"
+	        android:textColor="@color/units_header"
+	        android:layout_gravity="center_vertical" />
+	
+		<ImageView style="@style/UnitsSeparator" />	
+	    
+	    <TextView
+	        android:layout_width="40dp"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:text="@string/unit_sht"
+	        android:textColor="@color/units_header"
+	        android:layout_gravity="center_vertical" />                
+	</LinearLayout>
+
+
+	 <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/list_background"
+        android:dividerHeight="1dp" />
+</LinearLayout>

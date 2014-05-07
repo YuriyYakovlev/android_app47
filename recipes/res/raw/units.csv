@@ -1,0 +1,59 @@
+0;Eggplant;;;;;200
+0;Dried white mushrooms;100;80;10;4
+0;White cabbage.;;;;;1500
+0;Red Cabbage;;;;;750
+0;Cauliflower;;;;;100
+0;Onions;;;;;75
+0;Carrots;;;;;75
+0;Cucumbers;;;;;100
+0;Parsnips (root);;;;;75
+0;Parsley (root);;;;;75
+0;Tomatoes;;;;;100
+0;Beet;;;;;50
+0;Celery (root);;;;;100
+1;Cherry;190;150;30
+1;Strawberry;170;140;25;5
+1;Strawberries;150;120;25
+1;Lemon;;;;;120
+1;Raspberries;140;110;20
+1;Currant;180;130;30
+1;Apples;;;;;100
+2;Peanuts;175;140;20
+2;Sultana raisins;190;155;25;7
+2;Almonds;160;130;30;10
+2;Filbert;170;130;30;10
+3;Milk;255;204;18
+3;Condensed milk;;;30;12
+3;Milk powder;120;100;20;5
+3;Cream;250;200;14;5
+3;Sour cream;250;210;25;10
+4;Mayonnaise;250;210;25;10
+4;Margarine;230;180;15;4
+4;Oil;240;185;17;5
+4;Egg powder;180;100;25;10
+5;Hercules;90;;12
+5;Peas;230
+5;Buckwheat;210;165;25;7
+5;Semolina;200;;25
+5;Pearl barley;230;;25
+5;Barley groats;180;;20
+5;Flour;160;130;30;10
+5;Millet;220;;25
+5;Rice;240;180;30;10
+5;Lentil;210
+6;Water;250;200;18;5
+7;Honey;325;265;35;12
+7;Sugar;230;180;25;10
+8;Gelatin;;;15;5
+8;Cocoa powder;;;25;9
+8;Citric acid;;;25;8
+8;Ground cinnamon;;;20;8
+8;Ground coffee;;;20;7
+8;Starch;180;150;30;10
+8;Poppy;155;135;18;5
+8;Ground pepper;;;;5
+8;Powdered sugar;180;140;25;10
+8;Drinking Soda;;;28;12
+8;Salt;290;;28;7
+8;Tomato paste;220;;25;5
+8;Vinegar 3%;;;15;5

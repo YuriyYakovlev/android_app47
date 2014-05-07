@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="0dip"
+    android:paddingBottom="0dip"
+    android:paddingRight="2dip"
+    style="@style/ListItem">
+
+	<TextView
+        android:id="@+id/product"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:gravity="center_vertical"
+        android:textColor="@color/foreground2"
+        android:minHeight="?android:attr/listPreferredItemHeight" />
+
+	<ImageView style="@style/UnitsSeparator" />	
+    
+    <TextView
+        android:id="@+id/w1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textColor="@color/foreground2"
+		android:layout_gravity="center_vertical" />
+    
+	<ImageView style="@style/UnitsSeparator" />	
+    
+    <TextView
+        android:id="@+id/w2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textColor="@color/foreground2"
+		android:layout_gravity="center_vertical" />    
+
+	<ImageView style="@style/UnitsSeparator" />	
+    
+    <TextView
+        android:id="@+id/w3"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/foreground2"
+		android:layout_gravity="center_vertical" />
+        
+	<ImageView style="@style/UnitsSeparator" />	
+    
+    <TextView
+        android:id="@+id/w4"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/foreground2"
+		android:layout_gravity="center_vertical" />
+
+	<ImageView style="@style/UnitsSeparator" />	
+    
+    <TextView
+        android:id="@+id/w5"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/foreground2"
+		android:layout_gravity="center_vertical" />                
+</LinearLayout>

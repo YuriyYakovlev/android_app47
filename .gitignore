@@ -1,0 +1,11 @@
+.idea/
+.metadata/
+bin/
+gen/
+out/
+
+.settings/
+*.iml
+.directory
+build/
+.gradle/

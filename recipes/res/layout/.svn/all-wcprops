@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/org.m5/!svn/ver/1/res/layout
+END
+recipe_preview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/org.m5/!svn/ver/1/res/layout/recipe_preview.xml
+END
+activity_search.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/org.m5/!svn/ver/1/res/layout/activity_search.xml
+END
+list_item_recipe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/org.m5/!svn/ver/1/res/layout/list_item_recipe.xml
+END
+activity_reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/org.m5/!svn/ver/1/res/layout/activity_reference.xml
+END
+activity_comments_content.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/org.m5/!svn/ver/1/res/layout/activity_comments_content.xml
+END
+list_item_reference.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/org.m5/!svn/ver/1/res/layout/list_item_reference.xml
+END
+ad.xml
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/org.m5/!svn/ver/1/res/layout/ad.xml
+END
+quickaction.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/org.m5/!svn/ver/1/res/layout/quickaction.xml
+END
+activity_comments.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/org.m5/!svn/ver/1/res/layout/activity_comments.xml
+END
+list_item_dish.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/org.m5/!svn/ver/1/res/layout/list_item_dish.xml
+END
+tab_indicator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/org.m5/!svn/ver/1/res/layout/tab_indicator.xml
+END
+activity_basket_content.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/org.m5/!svn/ver/1/res/layout/activity_basket_content.xml
+END
+activity_recipe_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/org.m5/!svn/ver/1/res/layout/activity_recipe_detail.xml
+END
+activity_kitchen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/org.m5/!svn/ver/1/res/layout/activity_kitchen.xml
+END
+list_item_comment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/org.m5/!svn/ver/1/res/layout/list_item_comment.xml
+END
+ornament.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/org.m5/!svn/ver/1/res/layout/ornament.xml
+END
+activity_e.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/org.m5/!svn/ver/1/res/layout/activity_e.xml
+END
+activity_basket.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/org.m5/!svn/ver/1/res/layout/activity_basket.xml
+END
+activity_recipe_content.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/org.m5/!svn/ver/1/res/layout/activity_recipe_content.xml
+END
+activity_profile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/org.m5/!svn/ver/1/res/layout/activity_profile.xml
+END
+list_item_kitchen.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/org.m5/!svn/ver/1/res/layout/list_item_kitchen.xml
+END
+list_item_e.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/org.m5/!svn/ver/1/res/layout/list_item_e.xml
+END
+titlebar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/org.m5/!svn/ver/1/res/layout/titlebar.xml
+END
+action_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/org.m5/!svn/ver/1/res/layout/action_item.xml
+END
+voice_recognition_dialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/org.m5/!svn/ver/1/res/layout/voice_recognition_dialog.xml
+END
+activity_recipe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/org.m5/!svn/ver/1/res/layout/activity_recipe.xml
+END
+activity_units.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/org.m5/!svn/ver/1/res/layout/activity_units.xml
+END
+activity_dish.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/org.m5/!svn/ver/1/res/layout/activity_dish.xml
+END
+tab_recipe_products.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/org.m5/!svn/ver/1/res/layout/tab_recipe_products.xml
+END
+activity_home.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/org.m5/!svn/ver/1/res/layout/activity_home.xml
+END
+list_item_unit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/org.m5/!svn/ver/1/res/layout/list_item_unit.xml
+END
+tab_recipe_make.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/org.m5/!svn/ver/1/res/layout/tab_recipe_make.xml
+END

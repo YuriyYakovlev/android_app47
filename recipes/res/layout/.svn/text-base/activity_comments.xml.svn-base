@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout android:id="@+id/recipe_comments_title" 
+    	style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_back"
+            android:src="@drawable/ic_title_back"
+            android:onClick="onBackClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:src="@drawable/ic_title_vote"
+            android:onClick="onVoteClick" />
+
+    </LinearLayout>
+    
+    <LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" 
+    	android:layout_weight="0.9">
+		<include layout="@layout/activity_comments_content" />
+    </LinearLayout>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:id="@+id/addCommentForm"
+		style="@style/TitleBar"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    <EditText
+			android:id="@+id/edtComment"
+			android:layout_gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:hint="@string/add_comment"
+			android:layout_weight="1" />
+		<ImageButton
+			android:id="@+id/btnSend"
+			style="@style/TitleBarAction"
+			android:contentDescription="@string/description_send_comm"
+			android:src="@drawable/ic_title_send"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:layout_gravity="center"
+			android:onClick="onSendClick"
+			/>
+	 </LinearLayout>
+
+</LinearLayout>

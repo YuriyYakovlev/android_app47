@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout android:id="@+id/recipe_title"
+     	style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/ic_title_home"
+            android:onClick="onHomeClick" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_search"
+            android:onClick="onSearchClick" />
+            
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton android:id="@+id/icon_mic" 
+        	style="@style/TitleBarAction"
+            android:contentDescription="@string/description_mic"
+            android:src="@drawable/ic_title_mic"
+            android:onClick="onVoiceClick" />
+            
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton android:id="@+id/btnDelete" 
+        	style="@style/TitleBarAction"
+            android:contentDescription="@string/description_delete"
+            android:src="@drawable/ic_title_delete"
+            android:onClick="onDeleteClick"
+            android:visibility="gone" />         
+    </LinearLayout>
+
+    <include layout="@layout/activity_recipe_content" />
+</LinearLayout>

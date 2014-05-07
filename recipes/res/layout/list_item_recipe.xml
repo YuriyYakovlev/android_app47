@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_recipe"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    style="@style/ListItem">
+    <!-- TODO: swap out with better star drawable when disabled -->
+    <LinearLayout android:id="@+id/icons"
+	    android:layout_alignParentRight="true"
+	   	android:layout_alignParentTop="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingTop="0dip"
+	    android:paddingBottom="0dip"
+	    android:paddingRight="2dip"
+	    style="@style/ListItem">
+
+    <View android:id="@+id/icon1"
+        android:layout_width="100dp"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:visibility="gone" />
+
+	<CheckBox
+	        android:id="@+id/star_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="3dip"
+	        android:layout_marginLeft="4dip"
+	        android:focusable="false"
+	        android:clickable="false"
+	        android:layout_gravity="center"
+	        android:contentDescription="@string/description_star"
+	        android:button="@android:drawable/btn_star" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/recipe_title"
+        android:layout_toLeftOf="@id/icons"
+        android:layout_alignParentLeft="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/DishTitle" />
+    <TextView
+        android:id="@+id/recipe_subtitle"
+        android:layout_below="@id/recipe_title"
+        android:layout_toLeftOf="@id/icons"
+        android:layout_alignParentLeft="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dip"
+        style="@style/DishSubtitle" />
+   
+</RelativeLayout>

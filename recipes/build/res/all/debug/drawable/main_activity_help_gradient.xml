@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient 
+                android:centerColor="@color/black_transparence_center" 
+                android:endColor="@color/black_transparence_end" 
+                android:startColor="@android:color/transparent" 
+                android:gradientRadius="400"
+                android:type="radial" />
+        </shape>  
+	</item>
+</selector><!-- From: file:/D:/AndroidStudioWorkspace/babylon-android/res/drawable/main_activity_help_gradient.xml -->

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Pan Galushka</string>
+    <string name="serverUrl">SERVER_URL</string>
+	<string name="database_name">recipe.db</string>
+	<string name="select_language">Select your language</string>
+    <string name="ok">OK</string>
+    
+    <string name="description_logo">Russian Recipes</string>
+    <string name="description_home">Main</string>
+    <string name="description_search">Search</string>
+    <string name="description_mic">Search</string>
+    <string name="description_refresh">Refresh</string>
+    <string name="description_delete">Delete</string>
+    <string name="description_comments">Comments</string>
+    <string name="description_share">Share</string>
+    <string name="description_star">Mark</string>
+	<string name="description_done">Done</string>
+	<string name="description_back">Back</string>
+	<string name="description_send_comm">New comment</string>
+	<string name="description_add">Add</string>
+	<string name="description_font">Font</string>
+	
+	<string name="voice_description">name ingredient</string>
+	<string name="voice_result">choose ingredient</string>
+    <string name="voice_inet_required">Not connected to Internet</string>
+	
+	<string name="title_basket">Basket</string>
+    <string name="title_dish">Dishes</string>
+    <string name="title_starred">Favourites</string>
+    <string name="title_kitchen">Cuisine</string>
+    <string name="title_units">Table of weights</string>
+    <string name="title_e">Table of additives</string>
+    <string name="title_reference">Reference</string>
+    <string name="title_profile">Profile</string>
+    
+    <string name="title_comments">Comments</string>
+    <string name="title_share">Share</string>
+
+    <string name="title_search">Search</string>
+    <string name="title_search_query">Search \'<xliff:g id="query">%1$s</xliff:g>\'</string>
+    <string name="title_mic">Search</string>
+    
+    <string name="btn_basket">Basket</string>
+    <string name="btn_dish">Dishes</string>
+    <string name="btn_starred">Favourites</string>
+    <string name="btn_kitchen">Cuisine</string>
+
+    <string name="empty_recipe">recipes search...</string>
+    <string name="empty_recipe_detail">recipe search...</string>
+    <string name="empty_kitchen">recipes search...</string>
+    <string name="empty_search">Search results</string>
+    <string name="empty_comments">loading comments...</string>
+	<string name="search_not_found">No matches found. \n Try to change search parameters.</string>
+	<string name="starred_not_found">List of your favourite recipes will appear there.</string>
+	<string name="filter">Ingredients:</string>
+	
+
+    <string name="recipe_make">Instructions</string>
+    <string name="recipe_products">Consist</string>
+    <string name="add_to_basket">Add to basket...</string>
+    <string name="basket_done">Ingredients added</string>
+    <string name="delete_confirm">Clear list</string>
+    <string name="empty_basket">Basket is empty. \n List of products will appear there.</string>
+    
+    <string name="cook_time">time - %s min.</string>
+    <string name="portions">portions - %s</string>
+    <string name="calories">calories ~ </string>
+    
+    <string name="search_recipes">Recipes</string>
+    <string name="starred_recipes">Recipes</string>
+    
+    <string name="search_label">Russian Recipes</string>
+    <string name="search_hint">search recipe</string>
+	
+	<string name="basket_share">To buy:</string>
+
+    <string name="share_template">I\'m cooking \'<xliff:g id="title">%1$s</xliff:g>\'. Russian chef</string>
+    
+    <string name="recipe_of_the_day_title">Recipe of the day</string>
+
+	<string name="russian">Русский</string>
+	<string name="english">English</string>
+	<string name="exit">Exit</string>
+	
+	<string name="update">Update</string>
+	<string name="status_insert_dish">wash the dishes...</string>
+	<string name="status_insert_kitchen">clean up the kitchen...</string>
+	<string name="status_insert_product">prepare workplace...</string>
+	<string name="status_insert_item">open the fridge...</string>
+	<string name="status_insert_recipe_product">get ingredients...</string>
+	<string name="status_insert_recipe">get ingredients...</string>
+	<string name="status_insert_units">open recipes...</string>
+	<string name="status_insert_e">wash your hands...</string>
+	<string name="status_insert_reference">wash your hands...</string>
+	
+	<string name="unit_products">products /\ngram</string>
+	<string name="unit_glass1">glass (250)</string>
+	<string name="unit_glass2">glass (200)</string>
+	<string name="unit_stl">sp.</string>
+	<string name="unit_chl">tsp.</string>
+	<string name="unit_sht">1 pcs</string>
+	
+	<string name="unit_veg">Vegetables, mushrooms and herbs</string>
+	<string name="unit_fru">Fruits and berries</string>
+	<string name="unit_nut">Nuts and dried fruit</string>
+	<string name="unit_mil">Milk and milk products</string>
+	<string name="unit_fat">Fats and oils, eggs</string>
+	<string name="unit_bob">Flour, cereals and legumes</string>
+	<string name="unit_dri">Drinks</string>
+	<string name="unit_swe">Confection</string>
+	<string name="unit_oth">Other</string>
+	
+	<string name="e_c1">E100-E199 (Dyes)</string>
+	<string name="e_c2">E200-E299 (Preservs)</string>
+	<string name="e_c3">E300-E399 (Antioxidants)</string>
+	<string name="e_c4">E400-E599 (Stabilizers, emulsifiers)</string>
+	<string name="e_c5">E600-E699 (Flavor enhancer)</string>
+	<string name="e_c6">E900-E999 (Antiflamings and other substances)</string>
+	
+	<string name="e_f1">Banned</string>
+	<string name="e_f2">Dangerous</string>
+	<string name="e_f3">Suspicious</string>
+	<string name="e_f4">Banned in some countries</string>
+	
+	<string name="pan_galushka_link">Remove ads</string>
+        
+	<string name="add_comment">Add a comment</string>
+	<string name="premium_account">VIP</string>
+	<string name="delete_comment">Delete comment?</string>
+    <string name="set_nickname">Your nickname</string>
+    <string name="save">Save</string>
+    
+</resources>

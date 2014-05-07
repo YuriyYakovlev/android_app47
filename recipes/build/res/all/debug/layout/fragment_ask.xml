@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ask_background" >
+
+    <include layout="@layout/view_topbar" />
+
+    <ListView
+        android:id="@+id/fragment_ask_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:layout_margin="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:scrollingCache="false"
+        android:fadingEdgeLength="0dp"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/grey_background3"
+        android:gravity="bottom"
+        android:padding="10dp" >
+
+        <ImageButton
+            android:id="@+id/fragment_ask_photo_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:contentDescription="@string/image_view_content_description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/btn_photo"/>
+
+        <LinearLayout
+            android:id="@+id/ask_fragment_divider"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_alignTop="@+id/fragment_ask_photo_button"
+            android:layout_alignBottom="@+id/fragment_ask_photo_button"
+            android:layout_toRightOf="@+id/fragment_ask_photo_button"
+            android:background="@color/grey" />
+
+        <EditText
+            android:id="@+id/fragment_ask_edit_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:inputType="text"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:lines="10"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ask_fragment_divider"
+            android:layout_toLeftOf="@+id/fragment_send_button"
+            android:background="@android:color/transparent"
+            android:hint="@string/ask_fragment_your_question"/>
+        
+        <Button
+            android:id="@+id/fragment_send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            android:text="@string/ask_fragment_send"
+            android:padding="10dp"
+            android:background="@drawable/selector_send_button"/>
+
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/D:/AndroidStudioWorkspace/babylon-android/res/layout/fragment_ask.xml -->

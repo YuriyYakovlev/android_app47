@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    <include layout="@layout/ornament"/>
+
+    <LinearLayout android:id="@+id/home_title" 
+    	style="@style/TitleBar">
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <View style="@style/TitleBarSpring" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:id="@+id/btn_title_refresh"
+            android:contentDescription="@string/description_refresh"
+            android:src="@drawable/ic_title_refresh"
+            android:onClick="onRefreshClick" />
+        <ProgressBar style="@style/TitleBarProgressIndicator"
+            android:id="@+id/title_refresh_progress"
+            android:visibility="gone" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/ic_title_search"
+            android:onClick="onSearchClick" />
+        
+        <ImageView style="@style/TitleBarSeparator" />
+        <ImageButton android:id="@+id/icon_mic" 
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_mic"
+            android:src="@drawable/ic_title_mic"
+            android:onClick="onVoiceClick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="6dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_dish"
+                style="@style/HomeButton"
+                android:onClick="onDishClick"
+                android:text="@string/btn_dish"
+                android:drawableTop="@drawable/home_btn_dish"/>
+            <Button android:id="@+id/home_btn_kitchen"
+                style="@style/HomeButton"
+                android:onClick="onKitchenClick"
+                android:text="@string/btn_kitchen"
+                android:drawableTop="@drawable/home_btn_kitchen"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_starred"
+                style="@style/HomeButton"
+                android:onClick="onStarredClick"
+                android:text="@string/btn_starred"
+                android:drawableTop="@drawable/home_btn_starred"/>
+            <Button android:id="@+id/home_btn_basket"
+                style="@style/HomeButton"
+                android:onClick="onBasketClick"
+                android:text="@string/btn_basket"
+                android:drawableTop="@drawable/home_btn_basket"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/recipe_of_the_day_height">
+		<LinearLayout android:id="@+id/recipe_of_the_day"
+		    android:layout_width="fill_parent"
+		    android:layout_height="@dimen/recipe_of_the_day_height"
+		    android:orientation="horizontal"
+		    android:gravity="center">
+		    <LinearLayout
+		        android:background="@color/background2"
+		        android:paddingLeft="14dip"
+		        android:paddingRight="14dip"
+		        android:paddingTop="5dip"
+		        android:paddingBottom="10dip"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:onClick="onRecipeOfTheDayClick"
+		        android:orientation="vertical"
+		        android:gravity="center">
+		        <TextView
+		            android:id="@+id/recipe_of_the_day_title"
+		            android:duplicateParentState="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textStyle="bold"
+		            android:textSize="@dimen/text_size_medium"
+		            android:textColor="@color/foreground1"
+		            android:text="@string/recipe_of_the_day_title"
+		            android:maxLines="2"
+		            android:ellipsize="end" />
+		       <LinearLayout
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent"
+		        	android:orientation="vertical">     
+			        <ProgressBar android:id="@+id/progressbar"
+		            	android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:paddingRight="6dip"
+			        	android:minHeight="2dip"
+					    android:maxHeight="2dip"
+						android:progressDrawable="@android:drawable/progress_horizontal"
+						android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+						android:max="15"
+					    android:indeterminateOnly="false"/>    
+			        <TextView
+			            android:id="@+id/recipe_of_the_day_subtitle"
+			            android:duplicateParentState="true"
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:paddingTop="3dip"
+			            android:textColor="@color/foreground2"
+			            android:textSize="@dimen/text_size_small"
+			            android:singleLine="true"
+			            android:ellipsize="end" />
+		         </LinearLayout>   
+		    </LinearLayout>
+		    <View
+		        android:layout_width="1px"
+		        android:layout_height="fill_parent"
+		        android:background="@android:color/white" />
+		    <ImageButton
+		        android:background="@drawable/btn_recipe_of_the_day_more"
+		        android:id="@+id/recipe_of_the_day_more"
+		        android:src="@drawable/ic_recipe_of_the_day_logo"
+		        android:padding="12dip"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:onClick="onMoreClick"
+		        android:scaleType="center" />
+		</LinearLayout>
+		
+		<com.loopme.widget.LoopMeButton
+	        xmlns:loopme="http://schemas.android.com/apk/lib/com.loopme.widget"
+	        android:id="@+id/loopmeButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        loopme:type="LMTab_bottom" />
+
+	</RelativeLayout>	
+</LinearLayout>
