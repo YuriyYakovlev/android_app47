@@ -11,6 +11,7 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,7 +98,7 @@ public class ReferenceActivity extends ListActivity implements AsyncQueryListene
         public void bindView(View view, Context context, Cursor cursor) {
             final TextView name = (TextView) view.findViewById(R.id.name);
             name.setText(cursor.getString(ReferenceQuery.NAME));
-            name.setTypeface(RecipesApplication.getInstance().getTypeface(), 1);
+            name.setTypeface(RecipesApplication.getInstance().getTypeface(), Typeface.BOLD);
 
             final TextView description = (TextView) view.findViewById(R.id.description);
             description.setText(cursor.getString(ReferenceQuery.DESCRIPTION));

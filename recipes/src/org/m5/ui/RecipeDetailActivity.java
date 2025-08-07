@@ -59,7 +59,7 @@ import android.widget.Toast;
  * {@link Activity} that displays details about a specific
  * {@link Recipe#_ID}, as requested through {@link Intent#getData()}.
  */
-public class RecipeDetailActivity extends AdActivity implements AsyncQueryListener, OnCheckedChangeListener, OnClickListener, OnLongClickListener {
+public class RecipeDetailActivity extends Activity implements AsyncQueryListener, OnCheckedChangeListener, OnClickListener, OnLongClickListener {
     private Uri mRecipeUri;
     private String mTitleString;
     private NotifyingAsyncQueryHandler mHandler;
@@ -109,7 +109,6 @@ public class RecipeDetailActivity extends AdActivity implements AsyncQueryListen
     private String kkal = " ккал)";
 
     
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         L10N.init();
@@ -141,10 +140,8 @@ public class RecipeDetailActivity extends AdActivity implements AsyncQueryListen
         
         // Gesture detection
         gestureDetector = new GestureDetector(new MyGestureDetector());
-    	initAdLayout();
     }
     
-    @Override
     protected void onDestroy() {
         super.onDestroy();
         mHandler = null;
@@ -159,10 +156,10 @@ public class RecipeDetailActivity extends AdActivity implements AsyncQueryListen
     
     /** Build and add "summary" tab. */
     private void setupTabs() {
-        final TabHost host = getTabHost();
+        //final TabHost host = getTabHost();
         // Summary content comes from existing layout
-        host.addTab(host.newTabSpec(M).setIndicator(buildIndicator(R.string.recipe_make)).setContent(R.id.tab_recipe_make));
-        host.addTab(host.newTabSpec(P).setIndicator(buildIndicator(R.string.recipe_products)).setContent(R.id.tab_recipe_products));
+        //host.addTab(host.newTabSpec(M).setIndicator(buildIndicator(R.string.recipe_make)).setContent(R.id.tab_recipe_make));
+        //host.addTab(host.newTabSpec(P).setIndicator(buildIndicator(R.string.recipe_products)).setContent(R.id.tab_recipe_products));
     }
 
     /** Build and add "products" tab. */
@@ -269,7 +266,7 @@ public class RecipeDetailActivity extends AdActivity implements AsyncQueryListen
      * string resource as its label.
      */
     private View buildIndicator(int textRes) {
-        final TextView indicator = (TextView) getLayoutInflater().inflate(R.layout.tab_indicator, getTabWidget(), false);
+        final TextView indicator = (TextView) getLayoutInflater().inflate(R.layout.tab_indicator, null, false);
         indicator.setText(textRes);
         indicator.setTypeface(RecipesApplication.getInstance().getTypeface());
         return indicator;

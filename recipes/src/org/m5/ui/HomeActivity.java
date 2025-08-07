@@ -111,17 +111,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
 		mHandler = new Handler();
         setContentView(R.layout.activity_home);
         
-        try {
-			SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-	    	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
-	    	/*
-	    	if(isPremium) {
-	    		findViewById(R.id.loopmeButton).setVisibility(View.GONE);
-	    	}
-            */
-        } catch(Exception e) {
-        	
-        }
+        
     	
         initOrnament();
         initTitle();
@@ -435,7 +425,9 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
 		View recipeOfTheDay = findViewById(R.id.recipe_of_the_day);
     	if(recipeOfTheDay != null) {
 			((TextView) recipeOfTheDay.findViewById(R.id.recipe_of_the_day_title)).setTypeface(RecipesApplication.getInstance().getTypeface());
-	    	if(progressTitle == null) progressTitle = this.getResources().getString(R.string.update);
+	    	if(progressTitle == null) {
+                progressTitle = this.getResources().getString(R.string.update);
+            }
 	        ((TextView) recipeOfTheDay.findViewById(R.id.recipe_of_the_day_title)).setText(progressTitle);
 		    progressTitle = this.getResources().getString(R.string.recipe_of_the_day_title);
 		    
@@ -461,14 +453,18 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
 	            int count = cursor.getCount();
 	            if(count > 0) {
 		            int j = Math.abs(getRandom().nextInt()) % count;
-		        	if(j == 0) j = 1; 
+		        	if(j == 0) {
+                        j = 1;
+                    }
 		            if(!cursor.move(j)) {
 		                return;
 		            }
 		            mROTDId = cursor.getString(RecipeQuery._ID);
 		            
 		            // landscape orientation
-		            if(findViewById(R.id.recipe_of_the_day) == null) return;
+		            if(findViewById(R.id.recipe_of_the_day) == null) {
+                        return;
+                    }
 		            L10N.init();
 		            ((TextView) findViewById(R.id.recipe_of_the_day_title)).setText(this.getResources().getString(R.string.recipe_of_the_day_title));
 			        ((TextView) findViewById(R.id.recipe_of_the_day_subtitle)).setText(cursor.getString(RecipeQuery.NAME));
@@ -513,34 +509,31 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
 
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-    	SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-    	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
     	MenuInflater inflater = getMenuInflater();
-    	inflater.inflate(isPremium ? R.menu.premium_menu : R.menu.menu, menu);
+    	inflater.inflate(R.menu.menu, menu);
         return true;
 	}
 	
     private String APP_MARKET_URL = "market://details?id=org.m5.plus"; 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-		    case R.id.russian:
-		    	L10N.changeLocale("ru");
-		    	finish();
-		    	startActivity(getIntent());
-		    	return true;
-		    case R.id.english:
-		    	L10N.changeLocale("en");
-		    	finish();
-		    	startActivity(getIntent());
-				return true;    
-		    case R.id.remove_ads:
-		    	Intent intent = new Intent(Intent.ACTION_VIEW);  
-		    	intent.setData(Uri.parse(APP_MARKET_URL));
-		    	startActivity(intent);
-		    default:
-		    	return true;
-	    }
+		int itemId = item.getItemId();
+		if (itemId == R.id.russian) {
+			L10N.changeLocale("ru");
+			finish();
+			startActivity(getIntent());
+			return true;
+		} else if (itemId == R.id.english) {
+			L10N.changeLocale("en");
+			finish();
+			startActivity(getIntent());
+			return true;
+		} else if (itemId == R.id.remove_ads) {
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setData(Uri.parse(APP_MARKET_URL));
+			startActivity(intent);
+		}
+		return true;
 	}
 	
     /*

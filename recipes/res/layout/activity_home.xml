@@ -152,14 +152,7 @@
 		        android:scaleType="center" />
 		</LinearLayout>
 		
-		<com.loopme.widget.LoopMeButton
-	        xmlns:loopme="http://schemas.android.com/apk/lib/com.loopme.widget"
-	        android:id="@+id/loopmeButton"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
-	        android:layout_centerHorizontal="true"
-	        loopme:type="LMTab_bottom" />
+		
 
 	</RelativeLayout>	
 </LinearLayout>

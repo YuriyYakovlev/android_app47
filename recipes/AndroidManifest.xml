@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.m5"
     android:installLocation="auto"
     android:versionCode="38"
     android:versionName="1.37">
 
-    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="19" />
+    
     
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -121,7 +120,7 @@
 
         <meta-data android:name="android.app.default_searchable" android:value=".ui.SearchActivity" />
 
-        <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="false"/>
+        
                    
         <activity
             android:name=".ui.UnitsActivity"
@@ -175,20 +174,9 @@
             </intent-filter>
         </activity>
 
- 		<receiver android:name=".LoopMeBroadcastReciever" android:exported="true">
-            <intent-filter>
-                <action android:name="com.loopme.intent.action.BUTTON_CLICKED" />
-                <action android:name="com.loopme.intent.action.ON_EXIT_YES_CLICKED" />
-                <action android:name="com.loopme.intent.action.ON_EXIT_NO_CLICKED" />
-                <action android:name="com.loopme.intent.action.BANNER_CLICKED" />
-                <action android:name="com.loopme.intent.action.REWARDS_BANNER_CLICKED" />
-            </intent-filter>
-        </receiver>
+ 		
 
-        <!-- Activity container to hold content shown when ads are clicked -->
-        <activity android:name="com.loopme.activities.LoopMeInboxActivity" android:theme="@android:style/Theme.Translucent" android:configChanges="orientation" android:exported="false"/>
-        <activity android:name="com.loopme.activities.LoopMeAdViewActivity" android:theme="@android:style/Theme.Translucent" android:configChanges="orientation" android:exported="false"/>
-        <activity android:name="com.loopme.activities.LoopMeExitPopupActivity" android:theme="@android:style/Theme.Translucent" android:configChanges="orientation" android:exported="false"/>
+        
 
         <!-- service android:name="service.SyncService" /-->
 

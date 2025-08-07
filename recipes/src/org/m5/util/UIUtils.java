@@ -23,7 +23,7 @@ import java.lang.ref.SoftReference;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.m5.ui.AdActivity;
+
 import org.m5.ui.HomeActivity;
 import org.m5.ui.RecipesApplication;
 import org.m5.ui.SearchActivity;
@@ -44,16 +44,16 @@ public class UIUtils {
     	return fetchDrawable(id, null);
     }
     
-	public static Drawable fetchDrawable(int id, AdActivity adActivity) {
+	public static Drawable fetchDrawable(int id, Activity activity) {
     	Drawable drawable = null;
-    	String key = (adActivity != null) ? id + LPNG : id + PNG;
+    	String key = (activity != null) ? id + LPNG : id + PNG;
     	
     	// read from file cache
     	File f = null;
     	if(RecipesApplication.USE_SD) {
         	f = new File(RecipesApplication.CACHE_DIR, key);
         	Bitmap bitmap = BitmapFactory.decodeFile(f.getPath());
-        	if(bitmap != null && adActivity != null) {
+        	if(bitmap != null && activity != null) {
         		drawable = new BitmapDrawable(RecipesApplication.getInstance().getResources(), bitmap);
         		return drawable;
         	}
@@ -67,7 +67,7 @@ public class UIUtils {
 	    	// fetch from URL
 	        InputStream is = null;
 	        try {
-	            String url = (adActivity != null) ? String.format(S1, SERVER_URL_LARGE, id) : String.format(S2, SERVER_URL, id);
+	            String url = (activity != null) ? String.format(S1, SERVER_URL_LARGE, id) : String.format(S2, SERVER_URL, id);
 	            URLConnection con = new URL(url).openConnection();
 	            con.connect();
 	            int fileLength = con.getContentLength();
@@ -119,8 +119,8 @@ public class UIUtils {
     public static void fetchDrawableOnThread(final int id, final View imageView) {
     	fetchDrawableOnThread(id, imageView, null);
     }
-    public static void fetchDrawableOnThread(final int id, final View imageView, final AdActivity adActivity) {
-        if(adActivity == null && RecipesApplication.getInstance().getDrawableHashMap().containsKey(id)) {
+    public static void fetchDrawableOnThread(final int id, final View imageView, final Activity activity) {
+        if(activity == null && RecipesApplication.getInstance().getDrawableHashMap().containsKey(id)) {
             imageView.setBackgroundDrawable(RecipesApplication.getInstance().getDrawableHashMap().get(id).get());
         }
 
@@ -140,7 +140,7 @@ public class UIUtils {
             @Override
             public void run() {
                 //TODO : set imageView to a "pending" image
-            	Drawable drawable = fetchDrawable(id, adActivity);
+            	Drawable drawable = fetchDrawable(id, activity);
                 Message message = handler.obtainMessage(1, drawable);
                 handler.sendMessage(message);
             }

@@ -136,7 +136,7 @@ public class RecipeActivity extends ListActivity implements AsyncQueryListener, 
     protected void onListItemClick(ListView l, View v, int position, long id) {
         if(mAdapter != null) {
 	    	final Cursor cursor = (Cursor)mAdapter.getItem(position);
-	        final String recipeId = cursor.getString(cursor.getColumnIndex(Recipe._ID));
+	        final String recipeId = cursor.getString(RecipeQuery._ID);
 	        final Uri recipeUri = Recipe.buildRecipeUri(recipeId);
 	        final Intent intent = new Intent(Intent.ACTION_VIEW, recipeUri);
 	        intent.putExtra("position", position);

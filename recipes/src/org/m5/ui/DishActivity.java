@@ -37,11 +37,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
+
 
 
 /**
@@ -52,8 +48,7 @@ import com.google.android.gms.ads.LoadAdError;
  * through {@link Intent#getData()}.
  */
 public class DishActivity extends ListActivity implements AsyncQueryListener {
-    private static String KEY = "a14ddbcb298ca1d";
-    private AdView adView;
+    
     private DishAdapter mAdapter;
     private NotifyingAsyncQueryHandler mHandler;
     private int mIdp;
@@ -166,11 +161,9 @@ public class DishActivity extends ListActivity implements AsyncQueryListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (adView != null) {
-            adView.destroy();
+        if (mAdapter != null) {
+        	mAdapter.changeCursor(null);
         }
-        // Null out the group cursor. This will cause the group cursor and all of the child cursors to be closed.
-        //mAdapter.changeCursor(null);
         mAdapter = null;
         mHandler = null;
     }
@@ -221,45 +214,6 @@ public class DishActivity extends ListActivity implements AsyncQueryListener {
     private void initOrnament() {
     	View ornament = (View) findViewById(R.id.viewOrnament);
 		ornament.setBackgroundDrawable(RecipesApplication.getInstance().getOrnamentDrawable());
-		// Create the adView
-        final LinearLayout layout = (LinearLayout)findViewById(R.id.AdView1);
-        
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-    	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
-    	
-        if(layout != null) {
-        	if(isPremium || getIntent().hasCategory(Intent.CATEGORY_TAB)) {
-        		layout.setVisibility(View.GONE);
-        	} else {
-        		adView = new AdView(this);
-                adView.setAdSize(AdSize.BANNER);
-                adView.setAdUnitId(KEY);
-        		layout.addView(adView);
-            	adView.loadAd(new AdRequest.Builder().build());
-            	adView.setAdListener(new AdListener() {
-					@Override
-					public void onAdClosed() {
-						RecipesApplication.adClicked = true;
-						layout.setVisibility(View.GONE);
-					}
-
-					@Override
-					public void onAdOpened() {
-						RecipesApplication.adClicked = true;
-						layout.setVisibility(View.GONE);
-					}
-
-					@Override
-					public void onAdLoaded() {
-					}
-
-					@Override
-					public void onAdFailedToLoad(LoadAdError adError) {
-					}
-            	});
-            	layout.setVisibility(View.VISIBLE);
-        	}
-        }
     }
     
     private void initTitle() {

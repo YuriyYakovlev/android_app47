@@ -139,8 +139,7 @@ public class CommentsActivity  extends Activity {
         	String u_id = settings.getString(Config.PROFILE_ID, "");
         	String u_name = settings.getString(Config.PROFILE_NAME, "");
         	String u_image = settings.getString(Config.PROFILE_IMAGE, "");
-        	boolean isPremium = settings.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
-        	String u_type = isPremium ? "1" : "0";
+        	String u_type = "0";
         	int u_version = android.os.Build.VERSION.SDK_INT;
     		new CommentsService().saveComment(text.trim(), CommentsService.recipeId, u_id, u_name, u_image, u_type, u_version);
     		

@@ -97,7 +97,7 @@
 	        android:paddingTop="5dp"
 	        android:visibility="gone" />
     	
-    	<include layout="@layout/ad"/>
+    	
 
 <!-- 	        android:layout_width="400dp"
 	        android:layout_height="232dp"

@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.7.3'
     }
 }
 
@@ -17,7 +17,6 @@ repositories {
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "org.m5"
@@ -32,6 +31,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard.cfg'
         }
+    }
+    
+    lint {
+        baseline = file("lint-baseline.xml")
+        disable 'AppLinkUrlError'
     }
     
     namespace 'org.m5'
@@ -49,8 +53,10 @@ android {
     }
     
     useLibrary 'org.apache.http.legacy'
+    buildFeatures {
+        renderScript true
+        aidl true
+    }
 }
 
-dependencies {
-    implementation 'com.google.android.gms:play-services-ads:21.0.0'
-}
+
