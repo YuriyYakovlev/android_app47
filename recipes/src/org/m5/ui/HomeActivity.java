@@ -23,8 +23,8 @@ import org.m5.util.UIUtils;
 import org.m5.util.NotifyingAsyncQueryHandler.AsyncQueryListener;
 import org.m5.R;
 
-import com.loopme.LoopMe;
-import com.loopme.widget.LoopMeExitPopup;
+//import com.loopme.LoopMe;
+//import com.loopme.widget.LoopMeExitPopup;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -114,9 +114,11 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
         try {
 			SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 	    	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
+	    	/*
 	    	if(isPremium) {
 	    		findViewById(R.id.loopmeButton).setVisibility(View.GONE);
 	    	}
+            */
         } catch(Exception e) {
         	
         }
@@ -541,6 +543,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
 	    }
 	}
 	
+    /*
     @Override
     public void onBackPressed() {
         LoopMeExitPopup exitPopup = new LoopMeExitPopup(HomeActivity.this);
@@ -553,5 +556,6 @@ public class HomeActivity extends Activity implements AsyncQueryListener {
         LoopMe loopMe = LoopMe.getInstance(this);
         loopMe.preloadInbox();
     }
+    */
     
 }

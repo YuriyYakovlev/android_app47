@@ -37,12 +37,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.Ad;
-import com.google.ads.AdListener;
-import com.google.ads.AdRequest;
-import com.google.ads.AdRequest.ErrorCode;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 
 
 /**
@@ -167,6 +166,9 @@ public class DishActivity extends ListActivity implements AsyncQueryListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (adView != null) {
+            adView.destroy();
+        }
         // Null out the group cursor. This will cause the group cursor and all of the child cursors to be closed.
         //mAdapter.changeCursor(null);
         mAdapter = null;
@@ -221,46 +223,38 @@ public class DishActivity extends ListActivity implements AsyncQueryListener {
 		ornament.setBackgroundDrawable(RecipesApplication.getInstance().getOrnamentDrawable());
 		// Create the adView
         final LinearLayout layout = (LinearLayout)findViewById(R.id.AdView1);
-	    /*AlphaAnimation alpha = new AlphaAnimation(0.7F, 0.7F);
-        alpha.setDuration(0); // Make animation instant
-        alpha.setFillAfter(true); // Tell it to persist after the animation ends
-        layout.startAnimation(alpha);*/
         
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
     	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
     	
         if(layout != null) {
-        	if(isPremium || /*RecipesApplication.adClicked ||*/ getIntent().hasCategory(Intent.CATEGORY_TAB)) {
+        	if(isPremium || getIntent().hasCategory(Intent.CATEGORY_TAB)) {
         		layout.setVisibility(View.GONE);
         	} else {
-        		adView = new AdView(this, AdSize.BANNER, KEY);
+        		adView = new AdView(this);
+                adView.setAdSize(AdSize.BANNER);
+                adView.setAdUnitId(KEY);
         		layout.addView(adView);
-            	adView.loadAd(new AdRequest());
+            	adView.loadAd(new AdRequest.Builder().build());
             	adView.setAdListener(new AdListener() {
 					@Override
-					public void onDismissScreen(Ad arg0) {
+					public void onAdClosed() {
 						RecipesApplication.adClicked = true;
 						layout.setVisibility(View.GONE);
 					}
 
 					@Override
-					public void onLeaveApplication(Ad arg0) {
+					public void onAdOpened() {
 						RecipesApplication.adClicked = true;
 						layout.setVisibility(View.GONE);
 					}
 
 					@Override
-					public void onPresentScreen(Ad arg0) {
+					public void onAdLoaded() {
 					}
 
 					@Override
-					public void onReceiveAd(Ad arg0) {
-					}
-
-					@Override
-					public void onFailedToReceiveAd(Ad arg0, ErrorCode arg1) {
-						// TODO Auto-generated method stub
-						
+					public void onAdFailedToLoad(LoadAdError adError) {
 					}
             	});
             	layout.setVisibility(View.VISIBLE);

@@ -10,7 +10,7 @@ import org.m5.provider.CustomContext;
 import org.m5.provider.RecipesDatabase;
 import org.m5.util.LruCacheLinkedHashMap;
 
-import com.loopme.LoopMe;
+//import com.loopme.LoopMe;
 
 import android.app.Application;
 import android.content.Context;
@@ -52,9 +52,11 @@ public class RecipesApplication extends Application {
 		instance = this;
 		drawableHashMap = Collections.synchronizedMap(new LruCacheLinkedHashMap(100));
 		
+        /*
         LoopMe loopMe = LoopMe.getInstance(getApplicationContext());
         loopMe.setAppKey("063a50db-168c-47c1-8065-1c1ca196f0d2");
         loopMe.sendAppOpen();
+        */
 	}
 	
 	public RecipesDatabase getDatabase() {

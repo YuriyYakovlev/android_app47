@@ -8,12 +8,11 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.google.ads.Ad;
-import com.google.ads.AdListener;
-import com.google.ads.AdRequest;
-import com.google.ads.AdRequest.ErrorCode;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 
 
 public abstract class AdActivity extends TabActivity {
@@ -24,42 +23,35 @@ public abstract class AdActivity extends TabActivity {
 	public void initAdLayout() {
 	    final LinearLayout adLayout = (LinearLayout)findViewById(R.id.AdView1);
 	    
-	    /*AlphaAnimation alpha = new AlphaAnimation(0.5F, 0.5F);
-        alpha.setDuration(0); // Make animation instant
-        alpha.setFillAfter(true); // Tell it to persist after the animation ends
-        adLayout.startAnimation(alpha);*/
-        
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
     	boolean isPremium = preferences.getBoolean(AdActivity.REMOVE_ADS_KEY, false);
     	
-	    if(adLayout != null && /*!RecipesApplication.adClicked &&*/ !isPremium) {
-	   		adView = new AdView(this, AdSize.BANNER, KEY);
+	    if(adLayout != null && !isPremium) {
+	   		adView = new AdView(this);
+            adView.setAdSize(AdSize.BANNER);
+            adView.setAdUnitId(KEY);
 	   		adLayout.addView(adView);
 	   		
-	   		adView.loadAd(new AdRequest());
+	   		adView.loadAd(new AdRequest.Builder().build());
 	    	adView.setAdListener(new AdListener() {
 				@Override
-				public void onDismissScreen(Ad arg0) {
+				public void onAdClosed() {
 					//RecipesApplication.adClicked = true;
 					adLayout.setVisibility(View.GONE);
 				}
 	
 				@Override
-				public void onFailedToReceiveAd(Ad arg0, ErrorCode arg1) {
+				public void onAdFailedToLoad(LoadAdError adError) {
 				}
 	
 				@Override
-				public void onLeaveApplication(Ad arg0) {
+				public void onAdOpened() {
 					//RecipesApplication.adClicked = true;
 					adLayout.setVisibility(View.GONE);
 				}
 	
 				@Override
-				public void onPresentScreen(Ad arg0) {
-				}
-	
-				@Override
-				public void onReceiveAd(Ad arg0) {
+				public void onAdLoaded() {
 					adLayout.setVisibility(View.VISIBLE);
 				}
 	    	});
@@ -71,6 +63,7 @@ public abstract class AdActivity extends TabActivity {
         super.onDestroy();
         if(adView != null) {
         	adView.setAdListener(null);
+        	adView.destroy();
         	adView = null;
         }
     }
