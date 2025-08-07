@@ -38,7 +38,7 @@ public class RecipesDatabase extends SQLiteOpenHelper {
     // NOTE: carefully update onUpgrade() when bumping database versions to make
     // sure user data is saved.
     // released version: 5
-    private static final int DATABASE_VERSION = 11;
+    private static final int DATABASE_VERSION = 12;
     
     private DataHandler mDataHandler;
     private Context context;

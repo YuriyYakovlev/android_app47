@@ -31,7 +31,7 @@ import org.m5.ui.SearchActivity;
 
 public class UIUtils {
 	private static final String TAG = "UIUtils";
-    private static final String SERVER_URL = "http://getstarted.com.ua/recipes/images/";
+    private static final String SERVER_URL = "https://getstarted.com.ua/recipes/images/";
     private static final String SERVER_URL_LARGE = "http://m5i.s3.amazonaws.com/";
     private static String S1 = "%s%d.jpg"; 
     private static String S2 = "%s%d.png"; 

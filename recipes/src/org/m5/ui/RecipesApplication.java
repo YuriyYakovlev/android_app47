@@ -65,8 +65,10 @@ public class RecipesApplication extends Application {
 		        // remove in memory db if exists
 	        	try {
 					File old = getDatabasePath(getResources().getString(R.string.database_name));
-					SQLiteDatabase.openDatabase(old.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
-			        old.delete(); // delete old instance to recreate db on sdcard
+					if (old.exists()) {
+						SQLiteDatabase.openDatabase(old.getAbsolutePath(), null, SQLiteDatabase.OPEN_READONLY);
+						old.delete(); // delete old instance to recreate db on sdcard
+					}
 			    } catch (Exception e) { // database doesn't exist yet.
 			    	Log.d(TAG, "db does not exist yet", e);
 			    }
@@ -74,10 +76,16 @@ public class RecipesApplication extends Application {
 	        if(RecipesApplication.USE_SD) {
 	        	File preparedDir = new File(RecipesApplication.CACHE_DIR);
 	            if(!preparedDir.exists()) {
-	            	preparedDir.mkdirs();
+	            	if (!preparedDir.mkdirs()) {
+						USE_SD = false;
+					}
 	            }
-	            mOpenHelper = new RecipesDatabase(new CustomContext(this), preparedDir.getAbsolutePath() + "/" + getResources().getString(R.string.database_name));
-	        } else {
+				if (USE_SD) {
+					mOpenHelper = new RecipesDatabase(new CustomContext(this), preparedDir.getAbsolutePath() + "/" + getResources().getString(R.string.database_name));
+				}
+	        }
+
+			if (mOpenHelper == null) {
 		        mOpenHelper = new RecipesDatabase(this, getResources().getString(R.string.database_name));
 	        }
 		}

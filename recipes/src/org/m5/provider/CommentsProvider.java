@@ -23,7 +23,7 @@ public abstract class CommentsProvider {
 	private static String C = "count"; 
 	private static String S = "save"; 
 	private static String R = "remove"; 
-	private static String S_URL = "http://getstarted.com.ua/recipes/CommentsDAO.php";
+	private static String S_URL = "https://getstarted.com.ua/recipes/CommentsDAO.php";
 	private static String UTF8 = "UTF-8";
 	
 	
